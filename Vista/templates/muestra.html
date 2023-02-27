@@ -1,0 +1,37 @@
+{% extends './base.html' %}
+
+{% block titulo %}Listado{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Titulo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Envio</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Link</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for producto in lista_producto.values %}
+        <tr>
+            <td>{{ producto[0] }}</td>
+            <td>{{ producto[1] }}</td>
+            <td>{{ producto[2] }}</td>
+            <td>{{ producto[3] }}</td>
+            <td>
+                <a href={{ producto[4] }} target="_blank">
+                    Link al producto
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

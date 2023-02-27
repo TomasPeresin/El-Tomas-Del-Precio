@@ -1,0 +1,25 @@
+.centrado {
+  margin-top: 10%;
+  background-color: #003049;
+  }
+
+html, body, header{
+    background-color: #003049;
+}
+
+.form-label, h4, h6{
+    color: white;
+}
+
+footer{
+  background-color: #003049;
+  color: white;
+  padding: 1em 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
