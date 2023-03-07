@@ -16,8 +16,3 @@ def busqueda():
         return render_template('muestra.html', lista_producto=tabla)
     else:
         return render_template('busqueda.html')
-
-
-
-if __name__ == '__main__':
-    app.run()

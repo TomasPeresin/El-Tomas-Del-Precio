@@ -18,29 +18,30 @@
     </h6>
     </div>
   </header>
-  <div class="centrado">
-  <div class="container text-center">
-    <div>
-      <h4>Bienvenido a mi proyecto de webscrapping hecho en <u>python</u> junto con </h4>
-        <h4 style="padding-bottom: 1em">selenium, pandas, beautiful soup y flask</h4>
+    <div class="container text-center">
+      <div>
+        <h4>Bienvenido a mi proyecto de webscrapping hecho en <u>python</u> junto con </h4>
+          <h4 style="padding-bottom: 1em">selenium, pandas, beautiful soup y flask</h4>
+      </div>
     </div>
-  </div>
-    <form>
+  <div class="centrado">
+    <form action="/busqueda" method="POST">
       <div class="container text-center">
         <div class="row">
           <div class="col-3"></div>
           <div class="col-6">
               <div class="mb-3">
-                <label for="producto" class="form-label">Ingrese el producto que desea buscar</label>
-                <input type="producto" class="form-control" id="producto">
+                <label for="pro" class="form-label">Ingrese el producto que desea buscar</label>
+                <input type="text" class="form-control" name="producto" id="pro">
               </div>
-                <button type="buscar" class="btn btn-primary principal">Buscar</button>
+                <button type="submit" class="btn btn-primary principal">Buscar</button>
           </div>
           <div class="col-3"></div>
         </div>
       </div>
     </form>
   </div>
+
   <div class="row">
     <footer>
         <p>Tomás Ignacio Peresin | El tomas del precio</p>

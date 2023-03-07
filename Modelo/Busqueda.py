@@ -3,15 +3,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from selenium.common.exceptions import WebDriverException
 import pandas as pd
-from datetime import date
 import time
-
+from selenium.webdriver import EdgeOptions
 
 def busqueda_mercado_libre(producto: str):
 
-    driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+    options = EdgeOptions()
+    options.add_argument("--headless --disable-gpu --width=1366 --height=780")
+
+    driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=options)
 
     home_link = "https://listado.mercadolibre.com.ar/"
 
@@ -101,4 +102,4 @@ def busqueda_mercado_libre(producto: str):
     return(lista_producto)
 
     #lista_producto.to_csv(r'D:/Facultad/El-Tomas-Del-Precio/listas/lista_' + search_kw + '.csv', index=None,
-    #                    header=True, encoding='utf-8-sig', sep=';')
+    #                   header=True, encoding='utf-8-sig', sep=';')
